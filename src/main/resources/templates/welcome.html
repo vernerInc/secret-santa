@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Secret Santa</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <link href="../css/button.css"
+          rel="stylesheet" media="screen"/>
+</head>
+<body>
+<audio autoplay>
+    <source src="../audio/jinglebells.mp3?raw=true" a` type="audio/mp3"/>
+</audio>
+
+<p style="text-align: center;">
+    <img src="../images/Secret-Santa-Button.png" width="300" height="300"/>
+</p>
+
+<h1 style="text-align: center;font-size: 40px;color:cornflowerblue">
+    <strong>Hi
+        <img
+                src="https://html-online.com/editor/tinymce/plugins/emoticons/img/smiley-cool.gif" width="38"
+                height="38"
+                alt="cool"/>&nbsp;
+        I am ready
+        to work. And are u ready?</strong></h1>
+
+<a href="#" id="button">
+    <span>Let's GO !</span>
+</a>
+
+<script>
+    function santaSays() {
+        $.ajax({
+            url: "/secret-santa/says"
+        }).then(function (data) {
+            $("#button").remove();
+            alert("I did it. Good luck!");
+        });
+    }
+
+    $("#button").click(function () {
+        santaSays()
+    });
+
+</script>
+</body>
+</html>
