@@ -1,0 +1,12 @@
+/*.iml
+/ear/*.iml
+/war/*.iml
+/log
+target
+/.idea
+/.idea/*.iml
+/.idea/*.xml
+/.idea/artifacts/*.xml
+/.idea/copyright/*.xml
+/.idea/inspectionProfiles/*.xml
+/.idea/libraries/*.xml
